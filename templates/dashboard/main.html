@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block webname %}Automated tests results{% endblock %}
+
+{% block content %}
+    <div class="table">
+        <div class="table__row">
+            <div class="table__cell table__cell_type_header table__cell_type_version">Version</div>
+            <div class="table__cell table__cell_type_header">Uploaded tests</div>
+            <div class="table__cell table__cell_type_header">Passed</div>
+            <div class="table__cell table__cell_type_header">Fail</div>
+            <div class="table__cell table__cell_type_header">Tested features</div>
+            <div class="table__cell table__cell_type_header min_start_date">Testing started</div>
+        </div>
+    </div>
+    {% for key, value in results.items %}
+        <div class="table">
+            <a class="table__row" href="/version/{{ key.id }}">
+                <div class="table__cell table__cell_type_version">{{ key.name }}</div>
+                <div class="table__cell">{{ value.total }}</div>
+                <div class="table__cell">{{ value.passed }}</div>
+                <div class="table__cell">{{ value.failed }}</div>
+                <div class="table__cell">{{ value.features_tested }}</div>
+                <div class="table__cell min_start_date">{{ value.start_date }}</div>
+            </a>
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
+
