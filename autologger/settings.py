@@ -24,7 +24,7 @@ DEBUG = True
 
 #TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = [u'10.51.110.97',]
+ALLOWED_HOSTS = [u'10.51.112.13',]
 
 
 # Application definition
