@@ -182,7 +182,7 @@ def count_matching(results, matched_features=None):
 def update_date_and_link(results):
     for date in results:
         link_date = datetime.strftime(date.start_time, '%d-%m-%Y_%H-%M-%S')
-        date.link = 'http://10.51.110.97/tmc/{}/{}/{}-total.html'.format(
+        date.link = 'http://10.51.112.13/tmc/{}/{}/{}-total.html'.format(
             date.version.id, link_date, date.feature.file_mask
         )
         date.start_time = datetime.strftime(date.start_time, '%d-%m-%Y %H:%M:%S')
