@@ -24,7 +24,7 @@ DEBUG = True
 
 #TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = [u'10.51.112.13',]
+ALLOWED_HOSTS = [u'10.51.112.13', u'ipmplc.visonic']
 
 
 # Application definition
